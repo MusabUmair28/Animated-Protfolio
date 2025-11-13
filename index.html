@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+
+    <nav>
+        <div class="logo">Musab</div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm Musab Shiwani</h1>
+            <p>Creative Developer & Designer</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </header>
+
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Crafting Digital Experiences</h3>
+                    <p>I'm a passionate developer with a love for creating beautiful and functional web experiences. With expertise in modern web technologies, I bring ideas to life through clean code and stunning design.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open source, or enjoying a good cup of coffee.</p>
+                    <div class="skills">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Animation</span>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-box">👨‍💻</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon"><img src="" alt=""></div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-stack e-commerce solution with real-time inventory management and seamless checkout experience.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🎨</div>
+                    <h3>Design Portfolio</h3>
+                    <p>An interactive portfolio showcasing creative designs with smooth animations and modern aesthetics.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">📱</div>
+                    <h3>Mobile App</h3>
+                    <p>A cross-platform mobile application built with React Native for seamless user experience.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🤖</div>
+                    <h3>AI Chatbot</h3>
+                    <p>An intelligent chatbot powered by machine learning to provide customer support and engagement.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">📊</div>
+                    <h3>Analytics Dashboard</h3>
+                    <p>A comprehensive dashboard for data visualization with interactive charts and real-time updates.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-icon">🎮</div>
+                    <h3>Web Game</h3>
+                    <p>An engaging browser-based game built with HTML5 Canvas and JavaScript animations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Have a project in mind? Let's work together to create something amazing!</p>
+                <div class="contact-form">
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" title="GitHub">💻</a>
+            <a href="#" title="LinkedIn">💼</a>
+            <a href="#" title="Twitter">🐦</a>
+            <a href="#" title="Email">📧</a>
+        </div>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </footer>
+<script src="./app.js"></script>
+</body>
+</html>
