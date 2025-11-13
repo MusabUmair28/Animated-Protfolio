@@ -1,4 +1,3 @@
- <script>
         // Create floating particles
         const particlesContainer = document.getElementById('particles');
         for (let i = 0; i < 50; i++) {
@@ -104,4 +103,3 @@
                 header.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
         });
-    </script>
