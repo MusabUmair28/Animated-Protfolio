@@ -1,131 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animated Portfolio — Your Name</title>
+  <meta name="description" content="Animated portfolio template (HTML/CSS/JS) with smooth scroll, reveal animations, project cards, skills, and contact." />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-
-    <nav>
-        <div class="logo">Musab</div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#home" onclick="closeMenu()">Home</a></li>
-            <li><a href="#about" onclick="closeMenu()">About</a></li>
-            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+  <canvas id="pcanvas"></canvas>
+  <header>
+    <div class="nav-inner container">
+      <div class="brand"><div class="logo">MS</div><div>
+        <div style="font-size:13px">Musab Shiwani</div>
+        <div style="font-size:11px;color:var(--muted)">Frontend • UI • JavaScript</div>
+      </div></div>
+      <button id="hamBtn" style="display:none;background:none;border:none;font-size:A26px;color:var(--accent);cursor:pointer">☰</button>
+      <nav id="mobileNav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="cta" id="downloadBtn">Download CV</a></li>
         </ul>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <header id="home">
-        <div class="hero-content">
-            <h1>Hi, I'm Musab Shiwani</h1>
-            <p>Creative Developer & Designer</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+  <main class="container" id="home">
+    <section class="hero">
+      <div class="hero-left">
+        <h1 class="reveal">Hi — I'm <span style="color:var(--accent)">Musab Shiwani</span></h1>
+        <div class="reveal typewriter" id="typewriter">I build interactive frontends & micro-UX.</div>
+        <p class="lead reveal" style="margin-top:14px">Full‑stack oriented front‑end developer specializing in modern JavaScript, animations, and accessible responsive design. I love turning ideas into delightful, fast UIs.</p>
+        <div style="margin-top:20px;display:flex;gap:10px;align-items:center" class="reveal">
+          <a href="#projects" class="btn">See projects</a>
+          <a href="#contact" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)">Hire me</a>
         </div>
-    </header>
+      </div>
 
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Crafting Digital Experiences</h3>
-                    <p>I'm a passionate developer with a love for creating beautiful and functional web experiences. With expertise in modern web technologies, I bring ideas to life through clean code and stunning design.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open source, or enjoying a good cup of coffee.</p>
-                    <div class="skills">
-                        <span class="skill-tag">HTML/CSS</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">Animation</span>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="profile-box">👨‍💻</div>
-                </div>
-            </div>
+      <div class="hero-right">
+        <div class="card reveal">
+          <div class="avatar">
+            <!-- placeholder illustration: replace src with your photo -->
+            <img src="My_CV.png" alt="Your face">
+          </div>
         </div>
+      </div>
     </section>
 
-    <section class="section" id="projects">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon"><img src="" alt=""></div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution with real-time inventory management and seamless checkout experience.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">🎨</div>
-                    <h3>Design Portfolio</h3>
-                    <p>An interactive portfolio showcasing creative designs with smooth animations and modern aesthetics.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">📱</div>
-                    <h3>Mobile App</h3>
-                    <p>A cross-platform mobile application built with React Native for seamless user experience.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">🤖</div>
-                    <h3>AI Chatbot</h3>
-                    <p>An intelligent chatbot powered by machine learning to provide customer support and engagement.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">📊</div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>A comprehensive dashboard for data visualization with interactive charts and real-time updates.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon">🎮</div>
-                    <h3>Web Game</h3>
-                    <p>An engaging browser-based game built with HTML5 Canvas and JavaScript animations.</p>
-                </div>
-            </div>
-        </div>
+    <section id="projects">
+      <h2 class="reveal">Featured Projects</h2>
+      <div class="grid-3">
+        <article class="project reveal" tabindex="0" data-tags="HTML,CSS,JS">
+          <div class="media"><link href="https://rangila-premium-laces.netlify.app/"></div>
+          <div class="content">
+            <h3 style="margin:0 0 8px">Sales Analytics</h3>
+            <p style="margin:0 0 12px;color:var(--muted)">A dashboard with charts, filters and realtime updates (mock data).</p>
+            <div class="tags"><span class="tag">React</span><span class="tag">Charts</span><span class="tag">Animations</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" tabindex="0" data-tags="Canvas,JS">
+          <div class="media">Canvas Game</div>
+          <div class="content">
+            <h3 style="margin:0 0 8px">Tiny Game</h3>
+            <p style="margin:0 0 12px;color:var(--muted)">A minimal arcade game to demonstrate performant canvas animation.</p>
+            <div class="tags"><span class="tag">Canvas</span><span class="tag">Performance</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" tabindex="0" data-tags="HTML,CSS">
+          <div class="media">Landing Page</div>
+          <div class="content">
+            <h3 style="margin:0 0 8px">Product Landing</h3>
+            <p style="margin:0 0 12px;color:var(--muted)">Pixel-perfect responsive landing with micro-interactions and A/B hero variants.</p>
+            <div class="tags"><span class="tag">Responsive</span><span class="tag">UX</span></div>
+          </div>
+        </article>
+
+      </div>
     </section>
 
-    <section class="section" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p style="font-size: 1.2rem; margin-bottom: 30px;">Have a project in mind? Let's work together to create something amazing!</p>
-                <div class="contact-form">
-                    <form onsubmit="handleSubmit(event)">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-button">Send Message</button>
-                    </form>
-                </div>
-            </div>
+    <section id="skills">
+      <h2 class="reveal">Skills</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+        <div class="skill reveal">
+          <h4 style="margin:0 0 8px">JavaScript</h4>
+          <div class="bar"><i data-width="92%"></i></div>
         </div>
+        <div class="skill reveal">
+          <h4 style="margin:0 0 8px">CSS & Animations</h4>
+          <div class="bar"><i data-width="88%"></i></div>
+        </div>
+        <div class="skill reveal">
+          <h4 style="margin:0 0 8px">React / Frameworks</h4>
+          <div class="bar"><i data-width="80%"></i></div>
+        </div>
+        <div class="skill reveal">
+          <h4 style="margin:0 0 8px">UI Design</h4>
+          <div class="bar"><i data-width="72%"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="reveal">Contact</h2>
+      <div style="display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:start">
+        <form class="card reveal" style="padding:18px" id="contactForm">
+          <div class="contact-form">
+            <input class="input" id="name" placeholder="Name" required />
+            <input class="input" id="email" placeholder="Email" required />
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button class="btn" type="submit">Send message</button>
+          </div>
+        </form>
+
+        <div class="card reveal">
+          <h4 style="margin-top:0">Get in touch</h4>
+          <p style="color:var(--muted)">Prefer email? <a href="musabraza2626@gmail.com">MusabShiwani@developer.com</a></p>
+          <div style="margin-top:16px">
+            <div style="font-size:13px;color:var(--muted)">Location</div>
+            <div style="font-weight:700">Karachi, Pakistan</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
-        <div class="social-links">
-            <a href="#" title="GitHub">💻</a>
-            <a href="#" title="LinkedIn">💼</a>
-            <a href="#" title="Twitter">🐦</a>
-            <a href="#" title="Email">📧</a>
-        </div>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <div style="max-width:900px;margin:18px auto;color:var(--muted);font-size:14px">© <span id="year"></span> Musab Shiwani — Built with ❤️ using HTML/CSS/JS</div>
     </footer>
-<script src="./app.js"></script>
+  </main>
+  <script src="./app.js"></script>
 </body>
 </html>
