@@ -19,7 +19,7 @@ Perfect for showcasing your projects, skills, and personal brand.
 ## 📁 Quick Start
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://musabumair28.github.io/Animated-Protfolio/
 cd your-portfolio
 ```
 
